@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iofrm</title>
+    <link rel="stylesheet" type="text/css" href="assests/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/iofrm-style.css">
+</head>
+
+<body>
+    <div class="preview-body" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="web-logo">
+                        <img src="assests/images/logo-dark.svg" alt="">
+                    </div>
+                    <div class="web-title">
+                        Forms in style.<br> For all purposes and websites.
+                    </div>
+                </div>
+            </div>
+            <div class="row forms-list">
+
+                <div class="col-12 col-sm-6 col-md-4 new">
+                    <a class="img-link" target="_blank" href="login27.html">
+                        <img src="assests/img/form33.jpg" alt="">
+                        <div class="template-name"><span>Collab</span></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="assests/js/jquery.min.js"></script>
+    <script src="assests/js/popper.min.js"></script>
+    <script src="assests/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/js/main.js"></script>
+    <script>
+        $.fn.shuffle = function() {
+
+            var allElems = this.get(),
+                getRandom = function(max) {
+                    return Math.floor(Math.random() * max);
+                },
+                shuffled = $.map(allElems, function() {
+                    var random = getRandom(allElems.length),
+                        randEl = $(allElems[random]).clone(true)[0];
+                    allElems.splice(random, 1);
+                    return randEl;
+                });
+
+            this.each(function(i) {
+                $(this).replaceWith($(shuffled[i]));
+            });
+
+            return $(shuffled);
+
+        };
+
+        $('.forms-list > div:not(.new)').shuffle();
+    </script>
+</body>
+
+</html>
