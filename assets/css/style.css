@@ -63,7 +63,7 @@
  
  :root {
      --secondary-color: #0E131D;
-     --text-color: #6600ff;
+     --text-color: #DB4A2B;
      --title-color: #111111;
      --text-font: 'Inter', sans-serif;
      --title-font: 'Outfit', sans-serif;
@@ -221,7 +221,7 @@
      position: fixed;
      z-index: 99999999;
      font-size: 14px;
-     background: #fff;
+     background: #F3F2ED;
      color: red;
      width: 40px;
      height: 40px;
@@ -440,14 +440,13 @@
  }
  
  .theme-btn.btn-one:hover {
-     background: #6600ff;
-     background: linear-gradient(to right, #a78bfa, #ec4899);
+     background: var(--theme-color);
  }
  
  .theme-btn:before {
      position: absolute;
      content: '';
-     background: var(--secondary-color);
+     /* background: #4800ff; */
      width: 100%;
      height: 100%;
      left: 0px;
@@ -2171,12 +2170,23 @@
  }
  
  .theme-btn.btn-one {
-     background: #6600ff;
- }
+    background: #DB4A2B; /* Original background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.theme-btn.btn-one:hover {
+    background-color: #E75B3D; /* Lighter/more vibrant shade for hover */
+}
+ 
  
  .theme-btn.btn-second {
-     background: linear-gradient(to right, #a78bfa, #ec4899);
+     background: var(--theme-color);
  }
+
  
  .main-header .menu-right-content .search-toggler:hover {
      color: var(--theme-color);
@@ -2185,6 +2195,8 @@
  .main-menu .navigation>li.current>a,
  .main-menu .navigation>li:hover>a {
      color: var(--theme-color);
+     font-size: larger;
+     font-weight: 800;
  }
  
  .sub-title {
@@ -2544,3 +2556,65 @@
  .marginingP {
      left: 0px;
  }
+ /* Carousel */
+ * {
+    box-sizing: border-box;
+  }
+
+  .carousel-container {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Carousel indicators (optional) */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    
+  }
+
+  /* .carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer; */
+    
+  /* } */
+
+  .carousel-indicators button.active {
+    background-color: #333;
+    
+  }
+  .cta {
+    background-color: #00796B; /* Original background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.cta:hover {
+    background-color: #009688; /* Lighter shade for hover */
+}

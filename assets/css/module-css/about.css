@@ -23,7 +23,7 @@
 .image_block_one .image-box:before {
     position: absolute;
     content: '';
-    background: #F9F6FF;
+    background: #F3F2ED;
     width: 500px;
     height: 100%;
     left: 0px;
@@ -225,7 +225,7 @@
     width: 75px;
     height: 75px;
     line-height: 75px;
-    background: #F7F1FF;
+    background: #F3F2ED;
     border-radius: 10px;
     text-align: center;
     font-size: 30px;

@@ -697,3 +697,31 @@
 
 
 })(window.jQuery);
+
+const images = document.querySelectorAll('.carousel-images img');
+const indicators = document.querySelectorAll('.carousel-indicators button');
+let currentIndex = 0;
+const totalImages = images.length;
+
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % totalImages;
+  updateCarousel();
+}
+
+function updateCarousel() {
+  document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// Auto-switch images every 3 seconds
+setInterval(showNextImage, 3000);
+
+// Optional: Click indicators to switch images
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});

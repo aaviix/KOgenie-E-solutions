@@ -46,7 +46,7 @@
 .service-section .tab-btns{
   position: relative;
   display: block;
-  background: #F9F9F9;
+  background: #F3F2ED;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -189,7 +189,7 @@
 .service-style-three .image-box{
   position: relative;
   display: block;
-  background: #F3F3FF;
+  background: #F3F2ED;
   border-radius: 20px;
   padding: 48px 48px 0px 48px;
 }
@@ -214,7 +214,7 @@
   display: inline-block;
   float: left;
   width: 202px;
-  background: #F9F9F9;
+  background: #F3F2ED;
   border-radius: 10px;
   padding: 25px 15px;
   text-align: center;
